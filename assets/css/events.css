@@ -1,0 +1,49 @@
+.calendar{
+	width:48px;
+	padding:6px 10px 16px;
+	background:url("https://mozilla.org.uk/media/img/bg-date-lt.png") center top no-repeat;
+	text-align:center;
+	font:10px/1 "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif
+}
+
+.calendar-month{
+	display:block;
+	font-size:1.4em;
+	text-transform:uppercase
+}
+
+.calendar-date{
+	display:block;
+	font-size:2.6em;
+	line-height:.95
+}
+
+.calendar-year{
+	display:block;
+	font-size:1.4em
+}
+
+.event{
+	padding:20px;
+	padding-left:108px;
+	margin-bottom:12px;
+	position:relative;
+	background:#fff;
+	border-bottom:1px solid #ddd
+}
+
+.event h1,.event h2,.event h3,.event h4,.event h5,.event h6,.event .huge,.event .large{
+	color:
+}
+
+.event-time{
+	position:absolute;
+	left:20px;
+	top:20px
+}
+
+.event-tags{
+	float:right;
+	margin-right:5px;
+	text-align:right
+}
