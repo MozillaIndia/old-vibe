@@ -1,6 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var errorPage = fs.readFileSync("./404.html");
+var fetchData = require("./fetchData.js");
 var app = express.createServer(express.logger());
 app.use("/css", express.static(__dirname+'/assets/css/'));
 app.use("/js", express.static(__dirname+'/assets/js/'));
@@ -11,6 +12,11 @@ app.get('/', function(request, response) {
 
     response.send(data.toString());
 });
+app.get('/data', function(rrequset, response){
+	var data = fs.readFileSync("data", 'utf-8');
+	response.setHeader('Content-Type', 'json/application');
+	response.end(data);
+})
 app.get('*', function(request, response){
 	var path = 'assets/templates'+request.params[0]+".html";
 	fs.exists(path, function(exists){
