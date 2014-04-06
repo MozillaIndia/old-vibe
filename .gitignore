@@ -1,2 +1,3 @@
 .idea/*
 vibe/vibe/*.pyc
+node_modules/.bin/*

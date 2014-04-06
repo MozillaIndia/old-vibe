@@ -1,6 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-
+var errorPage = fs.readFileSync("./404.html");
 var app = express.createServer(express.logger());
 app.use("/css", express.static(__dirname+'/assets/css/'));
 app.use("/js", express.static(__dirname+'/assets/js/'));
@@ -20,10 +20,10 @@ app.get('*', function(request, response){
 				if (!err)
 					response.end(data, 'utf-8');
 				else
-					response.end("You are drunk go Home!", 'utf-8');
+					response.end(errorPage.toString(), 'utf-8');
 			});
 		}else{
-			response.end("You are drunk go Home!", 'utf-8');
+			response.end(errorPage.toString(), 'utf-8');
 		}
 	});
 });
