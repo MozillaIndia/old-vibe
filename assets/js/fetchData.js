@@ -19,7 +19,7 @@ $(document).ready(function(){
 				string+= "</section>";
 			}
 			//debugger
-			$(".span8").html(string);
+			$("#centfix").html(string);
 		}
 	})
 });
