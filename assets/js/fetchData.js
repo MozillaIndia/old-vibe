@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$.get('./data', function(data){
 		if (data){
 			var string = "";
-			var months = new Array("","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC");
+			var months = new Array("JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC");
 			var events = data.objects;
 			for (var i=events.length-1;i>=0;i--) {
 				var event = events[i];
