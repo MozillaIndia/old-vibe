@@ -6,7 +6,9 @@
 var https = require('https');
 var fs = require('fs');
 var isFirstRequest = true;
-var repsUri = 'https://reps.mozilla.org/api/v1/event/?offset=0&limit=0&start__gte=2014-04-05&query=india';
+var dateToday = new Date();
+var dateString = dateToday.getFullYear() + "-" + (dateToday.getMonth()+1) + "-" + dateToday.getDate()
+var repsUri = 'https://reps.mozilla.org/api/v1/event/?offset=0&limit=0&start__gte=' + dateString + '&query=india';
 
 https.get(repsUri, function(res) {
         
