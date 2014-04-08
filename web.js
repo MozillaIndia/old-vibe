@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
 
     response.send(data.toString());
 });
-app.get('/data', function(rrequset, response){
+app.get('/data', function(request, response){
 	var data = fs.readFileSync("data", 'utf-8');
 	response.setHeader('Content-Type', 'json/application');
 	response.end(data);
