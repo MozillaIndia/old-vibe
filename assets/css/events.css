@@ -1,3 +1,24 @@
+@charset "utf-8";
+
+/**
+* Stylesheet Index:
+* =================
+*
+* 0. Reset
+* 1. Imports
+* 2. Elements
+* 3. ID & Classes
+* 4. Pseudoclasses
+* 5. Media Queries
+**/
+
+/* 0. Reset */
+
+/* 1. Imports */
+
+/* 2. Elements */
+
+/* 3. ID & Classes */
 .calendar{
 	width:48px;
 	padding:6px 10px 16px;
@@ -30,10 +51,13 @@
 	position:relative;
 	background:#fff;
 	border-bottom:1px solid #ddd
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border-radius: 5px;
 }
 
 .event h1,.event h2,.event h3,.event h4,.event h5,.event h6,.event .huge,.event .large{
-	color:
+	color: ;
 }
 
 .event-time{
@@ -47,3 +71,7 @@
 	margin-right:5px;
 	text-align:right
 }
+
+/* 4. Pseudoclasses */
+
+/* 5. Media Queries */

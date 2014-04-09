@@ -1,15 +1,44 @@
-/*
-	MPL CSS
-*/
+@charset "utf-8";
+
+/**
+* Stylesheet Index:
+* =================
+*
+* 0. Reset
+* 1. Imports
+* 2. Elements
+* 3. ID & Classes
+* 4. Pseudoclasses
+* 5. Media Queries
+**/
+
+/* 0. Reset */
+
+/* 1. Imports */
+
+/* 2. Elements */
+html {
+	background-color: #F6F4EC;
+}
+
 body{
+	background: -webkit-linear-gradient(#D7D3C8, #F6F4EC);
+	background: -o-linear-gradient(#D7D3C8, #F6F4EC);
+	background: -moz-linear-gradient(#D7D3C8, #F6F4EC);
+	background: linear-gradient(#D7D3C8, #F6F4EC);
 	margin: 0;
 	overflow-x: hidden;
 }
+
+/* 3. ID & Classes */
+
+/* 4. Pseudoclasses */
+
+/* 5. Media Queries */
 @media only screen and (min-width : 801px) {
    /* Styles for 1*/
-
 	#centfix {
-		width: 800px; 
+		max-width: 800px; 
 		margin: 0 auto;
 	}
 }

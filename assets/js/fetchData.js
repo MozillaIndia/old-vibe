@@ -18,7 +18,7 @@ $(document).ready(function(){
 				string+= "<p>"+event.description+"</p>";
 				string+= "</section>";
 			}
-			//debugger
+
 			$("#centfix").html(string);
 		}
 	})
