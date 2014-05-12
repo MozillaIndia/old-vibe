@@ -4,7 +4,7 @@ $(document).ready(function(){
 			var string = "";
 			var months = new Array("JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC");
 			var events = data.objects;
-			for (var i=events.length-1;i>=0;i--) {
+			for (var i=0;i<events.length;i++) {
 				var event = events[i];
 				date = new Date(event.start);
 				string+= "<section class=\"event\"><p class=\"calendar event-time\"><time datetime=\"";
