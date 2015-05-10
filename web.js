@@ -2,37 +2,43 @@ var express = require('express');
 var fs = require('fs');
 var errorPage = fs.readFileSync("./404.html");
 var fetchData = require("./fetchData.js");
-var app = express.createServer(express.logger());
-app.use("/css", express.static(__dirname+'/assets/css/'));
-app.use("/js", express.static(__dirname+'/assets/js/'));
-app.use("/img", express.static(__dirname+'/assets/img/'));
+var app = express();
+var r = express.Router();
 
-app.get('/', function(request, response) {
-    var data = fs.readFileSync('index.html', 'utf8');
+app.use(express.static('assets'));
 
-    response.send(data.toString());
+r.get('/', function(req, res) {
+	var data = fs.readFileSync('index.html', 'utf8');
+	res.send(data.toString());
 });
-app.get('/data', function(request, response){
+
+r.get('/data', function(req, res) {
 	var data = fs.readFileSync("data", 'utf-8');
-	response.setHeader('Content-Type', 'json/application');
-	response.end(data);
-})
-app.get('*', function(request, response){
-	var path = 'assets/templates'+request.params[0]+".html";
-	fs.exists(path, function(exists){
-		if (exists){
-			fs.readFile(path, function(err, data){
-				console.log(response, data);
-				if (!err)
-					response.end(data, 'utf-8');
-				else
-					response.end(errorPage.toString(), 'utf-8');
+	res.setHeader('Content-Type', 'json/application');
+	res.end(data);
+});
+
+r.get('*', function(req, res) {
+	var p = 'assets/templates' + req.params[0]+ ".html";
+	// Update with the new templates
+	fs.exists(p, function(exists) {
+		if(exists) {
+			fs.readFile(p, function(err, d) {
+				if(err) 
+				   res.end(errorPage.toString(), 'utf-8');
+			        else
+				   res.end(d, 'utf-8');
 			});
-		}else{
-			response.end(errorPage.toString(), 'utf-8');
+		}
+		else {
+			res.end(errorPage.toString(), 'utf-8');
 		}
 	});
 });
+
+
+app.use('/', r);
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
