@@ -7,6 +7,12 @@ $(document).ready(function(){
 	populateData();
 });
 
+/*
+$('#mozTab a').click(function (mozArg) {
+	mozArg.preventDefault();
+	$(this).tab('show');
+});
+*/
 function populateData(city){
 	$.get('./data', function(data){
 		if (data){
@@ -15,7 +21,8 @@ function populateData(city){
 			var events = data.objects;
 			for (var i=0;i<events.length;i++) {
 				var event = events[i];
-				if(city=="" || typeof city=="undefined" || event.city.toLowerCase().indexOf(city)>=0) {	
+				if(city=="" || typeof city=="undefined" || event.city.toLowerCase().indexOf(city)>=0 || 
+					event.city.indexOf(city)>=0) {	
 					date = new Date(event.start);
 					string+= "<section class=\"event\"><p class=\"calendar event-time\"><time datetime=\"";
 					string+= new Date(event.start);

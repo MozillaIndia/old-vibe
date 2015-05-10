@@ -1279,17 +1279,9 @@ img{
 textarea,input[type=email],input[type=password],input[type=search],input[type=text]{
 	height:20px;
 	background:#fff;
-	border-color:#b2b2b2;
-	border-style:solid;
-	border-width:1px;
 	font-size:12px;
 	font-family:'Open Sans', sans-serif;
 	padding:3.3333333333333px 6.6666666666667px;
-	-moz-border-radius:3px;
-	border-radius:3px;
-	-webkit-box-shadow:0 1px rgba(255,255,255,0.5);
-	-moz-box-shadow:0 1px rgba(255,255,255,0.5);
-	box-shadow:0 1px rgba(255,255,255,0.5);
 	-webkit-transition:all linear .1s;
 	-moz-transition:all linear .1s;
 	-o-transition:all linear .1s;
@@ -1302,10 +1294,7 @@ textarea{
 }
 
 textarea:focus,input[type=email]:focus,input[type=password]:focus,input[type=search]:focus,input[type=text]:focus,input.focus{
-	border-color:#42a4e0;
-	-webkit-box-shadow:0 0 0 2px rgba(73,173,227,0.4);
-	-moz-box-shadow:0 0 0 2px rgba(73,173,227,0.4);
-	box-shadow:0 0 0 2px rgba(73,173,227,0.4);
+	
 	-webkit-transition:all linear .1s;
 	-moz-transition:all linear .1s;
 	-o-transition:all linear .1s;

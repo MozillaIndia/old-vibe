@@ -12,6 +12,7 @@
 
         <!--Library / Dependency Scripts-->
     	<script src="js/jquery.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
 		<!--Tabzilla-->
         <script src="http://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
         
@@ -50,18 +51,50 @@
 
     <body>
         <!--Content Area: Heading Title-->
-    	<h1 id="heading" style="text-align:center">Future Events</h1>
-	<!-Search Box -->
-	<input id="searchMe" type="text" placeholder="Type City">
 
-        <!--Events Container-->
-        <div id="centfix"></div>
+ <div class="container">
+    <div id="content">
+    	<ul id="mozTab" class="nav nav-tabs" data-tabs="tabs">
+            <li class="active"><a href="#evangl" data-toggle="tab" style="font-size: 1.5em;">Evangelists</a></li>
+            <li><a href="#events" data-toggle="tab" style="font-size: 1.5em;">Events</a></li>
 
-        <!--No-Script Text for ancient browsers-->
-        <noscript>
-        		JavaScript has to be enabled on your browser to get this working.
-        </noscript>
+        </ul>
+        <div id="my-tab-content" class="tab-content">
+            <div class="tab-pane active" id="evangl">
+            <center>
+                <p>The list of the evangelists is going to be deployed soon.</p>
+            </center>
+            </div>
+
+            <div class="tab-pane" id="events">
+                
+    		<!-Search Box -->
+				<input id="searchMe" type="text" placeholder="Type City">
+
+					
+
+			        <!--Events Container-->
+			        <div id="centfix"></div>
+
+			        <!--No-Script Text for ancient browsers-->
+			        <noscript>
+			        		JavaScript has to be enabled on your browser to get this working.
+			        </noscript>
+
+            </div>
+          
+        </div>
+    </div>
+</div>
+
+  
+
+
+			    				
+			    	
+ 
     </body>
+   
 
     <footer>
         <!--Tabzilla stylesheet-->

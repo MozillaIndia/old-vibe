@@ -32,6 +32,13 @@ body{
 
 /* 3. ID & Classes */
 
+#mozTab {
+		display: block;
+		margin-left: 450px;
+		width: 100%;
+
+	}
+
 /* 4. Pseudoclasses */
 
 /* 5. Media Queries */
@@ -55,3 +62,12 @@ body{
 		width: 90%!important;
 	}
 }
+
+@media only screen and (max-width : 968px) {
+	#mozTab{
+		display: block;
+		margin-left: 550px;
+		width: 90%!important;
+	}
+}
+
